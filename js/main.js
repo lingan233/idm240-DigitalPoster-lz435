@@ -1,57 +1,45 @@
-// // $(document).ready(function(){
-// //     // $( "#rocket-wrapper" ).on( "click", function( event ) {
-// //     //     $(this).addClass('menu-btn-spin');
-// //     // });
-// //     $('#rocket-wrapper').click(function () {
-// //         $(this).toggle('slide');
-// //     });
-// // });
-
-// $(document).ready(function () {
-
-//     $('#rocket-body').click(function () {
-//         $('#rocket').addClass('slide');
-//     });
-
-//     // // click on menu items
-//     // $(".slideout li").on("click", function () {
-//     //     // remove the active class from all elements with active class
-//     //     $('.active').removeClass('active')
-//     //     // add active class to clicked element
-//     //     $(this).addClass('active');
-//     //     $('.content-txt').html($('.active').text() + ' PAGE');
-//     // });
+// var rocketSvg = document.getElementById("rocketSvg");
+// console.log(rocketSvg);
+// rocketSvg.addEventListener("click", function () {
+//     rocketSvg.classList.add("slideBottomRight");
+//     setTimeout(function () {
+//         rocketSvg.classList.remove("slideBottomRight");
+//     }, 1500);
 // });
 
+var rocketFlame;
+var rocketLine;
+var rocketTip;
+var rocketBody;
+var rocketAll;
 
-// var rocketObj = document.getElementById("rocketObj");
+var rocketObj = document.getElementById("rocketObj");
 
-// var rocketFlame;
-// var rocketLine;
-// var rocketTip;
-// var rocketBody;
-// var rocketAll;
+rocketObj.addEventListener("load", function () {
+    svgConDoc = rocketObj.contentDocument;
 
-// rocketObj.addEventListener("load", function () {
-//     svgConDoc = rocketObj.contentDocument;
+    console.log(svgConDoc);
+    rocketFlame = svgConDoc.getElementById("rocketFlame");
+    rocketSvg = svgConDoc.getElementById("rocketSvg");
+    rocketSvg.addEventListener("click", function() {
+        rocketObj.classList.add("slideBottomRight");
+        changeColor(rocketFlame, "rgb(212, 50, 79)", "rgb(242, 234, 82)");
+        setTimeout(function () {
+            rocketObj.classList.remove("slideBottomRight");
+            changeColor(rocketFlame, "rgb(212, 50, 79)", "rgb(242, 234, 82)");
+        }, 1500);
+    });
+});
 
-//     console.log(svgConDoc);
-//     rocketFlame = svgConDoc.getElementById("rocket-flame");
-//     rocketAll = svgConDoc.getElementById("rocketSvg");
-//     rocketAll.addEventListener("click", function() {
-//         changeColor(rocketFlame, "rgb(212, 50, 79)", "rgb(242, 234, 82)");
-//     });
-// });
-
-// function changeColor(location, colorA, colorB) {
-//     if (location.style.fill !== colorA) {
-//         location.style.fill = colorA;
-//         // alert("if");
-//     } else {
-//         location.style.fill = colorB;
-//         // alert("else");
-//     }
-// }
+function changeColor(location, colorA, colorB) {
+    if (location.style.fill !== colorA) {
+        location.style.fill = colorA;
+        // alert("if");
+    } else {
+        location.style.fill = colorB;
+        // alert("else");
+    }
+}
 
 
 

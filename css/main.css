@@ -8,8 +8,9 @@
     --beige: #E7E0BF;
     --green: #8DB958;
     --dark_blue: #1D2439;
+    --blue: #0DA3C4;
     --red: #CC344F;
-
+    --yellow: #EDC140;
 }
 
 * {
@@ -94,7 +95,7 @@ h4 {
 }
 
 .svg-container {
-    padding: 20px;    
+    padding: 20px;
     margin: -50px auto;
     max-width: 800px;
 }
@@ -116,8 +117,16 @@ h4 {
     margin-bottom: -60px;
 }
 
-#soundBtn {
+.btn {
     cursor: pointer;
+    padding: 18px;
+    border-radius: 500px;
+    border: 4px solid black;
+    margin: 0 15px 0 auto;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    display: flex;
 }
 
 .top-svg-container {
@@ -125,13 +134,8 @@ h4 {
 }
 
 #soundBtn {
-    padding: 18px;
-    border-radius: 500px;
-    border: 4px solid black;
     background-color: var(--red);
-    display: flex;
     justify-content: flex-end;
-    margin: 0 15px 0 auto;
     background-image: url('../img/no-sound.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -139,8 +143,16 @@ h4 {
     top: 7px;
 }
 
-#soundBtn:hover {
+.cursorPointer {
+    cursor: pointer;
+}
+
+.btn:hover {
     opacity: .7;
+}
+
+.middle-svg-container {
+    margin-top: -140px;
 }
 
 #rocketObj {
@@ -149,14 +161,15 @@ h4 {
     position: relative;
     left: 20px;
     top: 18px;
+    cursor: pointer;
 }
 
 .slideBottomRight {
     animation-name: slideBottomRight;
     -webkit-animation-name: slideBottomRight;
 
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
+    animation-duration: 1.3s;
+    -webkit-animation-duration: 1.3s;
 
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
@@ -171,12 +184,12 @@ h4 {
     }
 
     50% {
-        transform: translate(300%, 300%);
+        transform: translate(500%, 500%);
         opacity: 0;
     }
 
     75% {
-        transform: translate(-300%, -300%);
+        transform: translate(-500%, -500%);
         opacity: 0;
     }
 
@@ -298,14 +311,17 @@ h4 {
         float: right;
         padding-top: 100px;
     }
+
     #coldplayObj {
         max-width: 50vw;
     }
+
     .svg-container {
         max-width: 100%;
         padding: 10px;
         margin-top: 0;
     }
+
     #coldplayObj {
         margin: 0;
     }
