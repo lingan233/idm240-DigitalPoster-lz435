@@ -129,6 +129,15 @@ h4 {
     display: flex;
 }
 
+.btn, #rocketObj {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: 65% 65%;
+}
+
+.btn:hover, #rocketObj:hover {
+    transform: scale(1.1);
+}
+
 .top-svg-container {
     margin: -50px auto;
 }
@@ -145,10 +154,6 @@ h4 {
 
 .cursorPointer {
     cursor: pointer;
-}
-
-.btn:hover {
-    opacity: .7;
 }
 
 .middle-svg-container {
@@ -168,8 +173,8 @@ h4 {
     animation-name: slideBottomRight;
     -webkit-animation-name: slideBottomRight;
 
-    animation-duration: 1.3s;
-    -webkit-animation-duration: 1.3s;
+    animation-duration: 1.7s;
+    -webkit-animation-duration: 1.7s;
 
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
@@ -184,12 +189,12 @@ h4 {
     }
 
     50% {
-        transform: translate(500%, 500%);
+        transform: translate(700%, 700%);
         opacity: 0;
     }
 
     75% {
-        transform: translate(-500%, -500%);
+        transform: translate(-100%, -100%);
         opacity: 0;
     }
 
@@ -222,6 +227,80 @@ h4 {
 
 }
 
+
+#bubbleSvg path:not(.no-wiggle):nth-child(4n), .wiggle-up1 {
+    animation: wiggle-up1 2.5s ease-in-out infinite;
+}
+
+#bubbleSvg ellipse:not(.no-wiggle), #bubbleSvg path:not(.no-wiggle):nth-child(4n+2) {
+    animation: wiggle-up2 4s ease-in-out infinite;
+}
+
+#bubbleSvg path:not(.no-wiggle):nth-child(4n+1), .wiggle-down1 {
+    animation: wiggle-down1 2s ease-in-out infinite;
+}
+
+#bubbleSvg path:not(.no-wiggle):nth-child(4n+3), .wiggle-down2 {
+    animation: wiggle-down2 3s ease-in-out infinite;
+}
+
+
+@keyframes wiggle-up1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes wiggle-up2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes wiggle-down1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes wiggle-down2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @media only screen and (min-width: 600px) {
 
     #text-container {
@@ -236,7 +315,7 @@ h4 {
     }
 
     #soundBtn {
-        padding: 22px;
+        padding: 25px;
     }
 
 }
