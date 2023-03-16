@@ -1,18 +1,3 @@
-// var rocketSvg = document.getElementById("rocketSvg");
-// console.log(rocketSvg);
-// rocketSvg.addEventListener("click", function () {
-//     rocketSvg.classList.add("slideBottomRight");
-//     setTimeout(function () {
-//         rocketSvg.classList.remove("slideBottomRight");
-//     }, 1500);
-// });
-
-var rocketFlame;
-var rocketLine;
-var rocketTip;
-var rocketBody;
-var rocketAll;
-
 var rocketObj = document.getElementById("rocketObj");
 
 rocketObj.addEventListener("load", function () {
@@ -40,27 +25,6 @@ function changeColor(location, colorA, colorB) {
         // alert("else");
     }
 }
-
-
-
-// var coldplayObj = document.getElementById("coldplayObj");
-
-// var coldplayAll;
-// var coldplayLarge;
-
-// rocketObj.addEventListener("load", function () {
-//     svgConDoc = coldplayObj.contentDocument;
-//     coldplayLarge = svgConDoc.getElementById("coldplay-large");
-//     console.log(svgConDoc);
-//     coldplayAll = svgConDoc.getElementById("coldplaySvg");
-//     coldplayAll.addEventListener("click", function() {
-//         changeColor(coldplayLarge, "rgb(106, 50, 159)", "rgb(8, 16, 41)");
-//     });
-// });
-
-
-
-// hwk04 js code
 
 const audioToggleBtn = document.getElementById('soundBtn');
 const myAudio = document.getElementById('sound1');
